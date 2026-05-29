@@ -1,8 +1,1049 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
   <head>
-    <title>1nigm4 god</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Резюме — Ганин Роман Вадимович</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      ul,
+      ol,
+      figure,
+      blockquote {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+      img,
+      video,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      :root {
+        --color-bg: #f5f7fb;
+        --color-text: #152033;
+        --color-accent: #3d63ff;
+        --color-surface: #ffffff;
+        --color-border: #d8e0f0;
+        --color-muted: #5f6f8d;
+        --color-accent-soft: #edf2ff;
+        --color-strong: #0c1424;
+        --color-success: #e8f6ef;
+        --font-body: "Manrope", sans-serif;
+        --font-heading: "Source Serif 4", serif;
+        --space-xs: 0.5rem;
+        --space-sm: 0.875rem;
+        --space-md: 1.25rem;
+        --space-lg: 2rem;
+        --space-xl: 3.5rem;
+        --radius: 20px;
+        --z-base: 1;
+        --z-top: 2;
+        --shadow: 0 18px 40px rgba(21, 32, 51, 0.08);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-bg: #0c1220;
+          --color-text: #edf2ff;
+          --color-accent: #7a95ff;
+          --color-surface: #131c30;
+          --color-border: #27324a;
+          --color-muted: #aeb9d1;
+          --color-accent-soft: #19233f;
+          --color-strong: #ffffff;
+          --color-success: #173126;
+          --shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+        }
+      }
+
+      html,
+      body {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-body);
+        background:
+          radial-gradient(circle at top left, rgba(61, 99, 255, 0.12), transparent 28%),
+          radial-gradient(circle at top right, rgba(61, 99, 255, 0.08), transparent 24%),
+          var(--color-bg);
+        color: var(--color-text);
+        line-height: 1.65;
+        font-size: 1rem;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition:
+          color 0.2s ease,
+          border-color 0.2s ease,
+          background-color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible,
+      select:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 3px;
+        border-radius: calc(var(--radius) / 2);
+      }
+
+      .container {
+        max-width: 1220px;
+        margin-inline: auto;
+        padding-inline: clamp(1rem, 5vw, 2rem);
+      }
+
+      .page {
+        padding-block: clamp(1.25rem, 3vw, 2rem) clamp(2rem, 5vw, 4rem);
+      }
+
+      .resume-shell {
+        display: grid;
+        grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+        gap: var(--space-lg);
+        align-items: start;
+      }
+
+      .sidebar,
+      .content {
+        min-width: 0;
+      }
+
+      .sidebar-card,
+      .section-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 1rem;
+        display: grid;
+        gap: var(--space-md);
+      }
+
+      .profile {
+        padding: var(--space-lg);
+        overflow: hidden;
+        position: relative;
+        isolation: isolate;
+      }
+
+      .profile::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        min-height: 160px;
+        background: linear-gradient(135deg, var(--color-accent), var(--color-strong));
+        z-index: 0;
+      }
+
+      .profile-inner {
+        position: relative;
+        z-index: var(--z-top);
+        display: grid;
+        gap: var(--space-md);
+      }
+
+      .avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background: var(--color-surface);
+        color: var(--color-accent);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 2rem;
+        border: 3px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 12px 30px rgba(12, 20, 36, 0.18);
+      }
+
+      .name-wrap {
+        display: grid;
+        gap: var(--space-xs);
+        color: #ffffff;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: fit-content;
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        backdrop-filter: blur(10px);
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+
+      h1 {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.02;
+        color: #ffffff;
+      }
+
+      .role {
+        font-size: 1.02rem;
+        color: rgba(255, 255, 255, 0.88);
+        max-width: 28ch;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        width: fit-content;
+        padding: 0.6rem 0.9rem;
+        border-radius: 999px;
+        background: var(--color-success);
+        color: var(--color-text);
+        font-weight: 700;
+        border: 1px solid var(--color-border);
+      }
+
+      .status-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        flex: 0 0 auto;
+      }
+
+      .contact-card,
+      .skill-card,
+      .extra-card {
+        padding: var(--space-lg);
+      }
+
+      .card-title {
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--color-muted);
+        margin-bottom: var(--space-md);
+        font-weight: 800;
+      }
+
+      .contact-list,
+      .meta-list {
+        display: grid;
+        gap: var(--space-sm);
+      }
+
+      .contact-item {
+        display: grid;
+        gap: 0.2rem;
+        padding: 0.8rem 0.9rem;
+        border-radius: calc(var(--radius) - 8px);
+        background: var(--color-accent-soft);
+        min-width: 0;
+      }
+
+      .contact-label {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--color-muted);
+        font-weight: 800;
+      }
+
+      .contact-value {
+        font-size: 0.98rem;
+        font-weight: 600;
+        word-break: break-word;
+      }
+
+      .contact-value.link {
+        color: var(--color-accent);
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+      }
+
+      .chip {
+        padding: 0.65rem 0.85rem;
+        border-radius: 999px;
+        background: var(--color-accent-soft);
+        border: 1px solid var(--color-border);
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--color-text);
+      }
+
+      .extra-list {
+        display: grid;
+        gap: var(--space-sm);
+      }
+
+      .extra-item {
+        padding-left: 1rem;
+        position: relative;
+        color: var(--color-muted);
+      }
+
+      .extra-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--color-accent);
+      }
+
+      .content {
+        display: grid;
+        gap: var(--space-md);
+      }
+
+      .hero-card {
+        padding: clamp(1.25rem, 3vw, 2rem);
+        display: grid;
+        gap: var(--space-lg);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 0.9fr;
+        gap: var(--space-lg);
+        align-items: start;
+      }
+
+      .summary h2,
+      .section-header h2 {
+        font-family: var(--font-heading);
+        font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+        line-height: 1.1;
+        color: var(--color-strong);
+        margin-bottom: var(--space-sm);
+      }
+
+      .summary p {
+        max-width: 68ch;
+        color: var(--color-text);
+        font-size: 1.03rem;
+      }
+
+      .quick-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-sm);
+        min-width: 0;
+      }
+
+      .stat {
+        padding: 0.5rem;
+        border-radius: calc(var(--radius) - 8px);
+        background: linear-gradient(180deg, var(--color-accent-soft), transparent);
+        border: 1px solid var(--color-border);
+        min-width: 0;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.4rem;
+        color: var(--color-strong);
+        line-height: 1.1;
+        margin-bottom: 0.35rem;
+      }
+
+      .stat span {
+        color: var(--color-muted);
+        font-size: 0.9rem;
+      }
+
+      .section-card {
+        padding: clamp(1.25rem, 3vw, 2rem);
+        display: grid;
+        gap: var(--space-md);
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-md);
+        align-items: end;
+        flex-wrap: wrap;
+      }
+
+      .section-note {
+        color: var(--color-muted);
+        max-width: 56ch;
+      }
+
+      .timeline {
+        display: grid;
+        gap: var(--space-md);
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: var(--space-md);
+        padding: var(--space-md);
+        border: 1px solid var(--color-border);
+        border-radius: calc(var(--radius) - 8px);
+        background: linear-gradient(180deg, rgba(61, 99, 255, 0.03), transparent);
+        min-width: 0;
+      }
+
+      .timeline-date {
+        color: var(--color-muted);
+        font-size: 0.94rem;
+        font-weight: 700;
+      }
+
+      .timeline-body {
+        min-width: 0;
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .timeline-body h3 {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        color: var(--color-strong);
+      }
+
+      .company {
+        color: var(--color-accent);
+        font-weight: 800;
+        margin-top: 0.2rem;
+      }
+
+      .timeline-body p {
+        color: var(--color-text);
+      }
+
+      .project-list {
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .project-card {
+        padding: 1rem;
+        border-radius: calc(var(--radius) - 10px);
+        background: var(--color-accent-soft);
+        border: 1px solid var(--color-border);
+        min-width: 0;
+      }
+
+      .project-card h4 {
+        font-size: 1rem;
+        color: var(--color-strong);
+        margin-bottom: 0.35rem;
+      }
+
+      .project-card p {
+        color: var(--color-text);
+      }
+
+      .result {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-weight: 800;
+        color: var(--color-accent);
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-md);
+      }
+
+      .skill-box {
+        min-width: 0;
+        padding: 1rem;
+        border: 1px solid var(--color-border);
+        border-radius: calc(var(--radius) - 8px);
+        background: var(--color-surface);
+      }
+
+      .skill-box h3 {
+        font-size: 1.02rem;
+        color: var(--color-strong);
+        margin-bottom: 0.6rem;
+      }
+
+      .skill-box p {
+        color: var(--color-muted);
+      }
+
+      .education-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-md);
+      }
+
+      .info-box {
+        min-width: 0;
+        padding: 1.1rem;
+        border-radius: calc(var(--radius) - 8px);
+        border: 1px solid var(--color-border);
+        background: linear-gradient(180deg, rgba(61, 99, 255, 0.03), transparent);
+      }
+
+      .info-box h3 {
+        font-size: 1.02rem;
+        margin-bottom: 0.35rem;
+        color: var(--color-strong);
+      }
+
+      .info-box p,
+      .info-box li {
+        color: var(--color-muted);
+      }
+
+      .info-box ul {
+        display: grid;
+        gap: 0.55rem;
+        margin-top: 0.5rem;
+      }
+
+      .footer-note {
+        padding: 1.1rem 1.25rem;
+        border-radius: calc(var(--radius) - 8px);
+	border: 1px solid var(--color-border);
+        background: var(--color-surface);
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-md);
+        flex-wrap: wrap;
+      }
+
+      .footer-note strong {
+        font-size: 1rem;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .footer-link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.7rem 1rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      .footer-link:hover,
+      .contact-value.link:hover {
+        color: var(--color-accent);
+      }
+
+      @media (max-width: 980px) {
+        .resume-shell {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          position: static;
+        }
+
+        .hero-grid,
+        .skills-grid,
+        .education-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .timeline-item {
+          grid-template-columns: 1fr;
+        }
+
+        .quick-stats {
+          grid-template-columns: 1fr;
+        }
+
+        .profile,
+        .contact-card,
+        .skill-card,
+        .extra-card,
+        .hero-card,
+        .section-card {
+          padding: 1.1rem;
+        }
+
+        body {
+          font-size: 16px;
+        }
+      }
+    </style>
   </head>
   <body>
-    
+    <div class="page">
+      <div class="container">
+        <main class="resume-shell">
+          <aside class="sidebar">
+            <section class="sidebar-card profile" aria-labelledby="profile-title">
+              <div class="profile-inner">
+                <div class="avatar" aria-hidden="true">ГР</div>
+                <div class="name-wrap">
+                  <span class="eyebrow">Middle Full-Stack .NET Developer</span>
+                  <h1 id="profile-title">Ганин Роман Вадимович</h1>
+                  <p class="role">
+                    Москва — готов к удалённой работе, командному взаимодействию и задачам полного
+                    цикла.
+                  </p>
+                </div>
+                <div class="status">
+                  <span class="status-dot" aria-hidden="true"></span>Открыт к предложениям и
+                  собеседованиям
+                </div>
+              </div>
+            </section>
+
+            <section class="sidebar-card contact-card" aria-labelledby="contacts-title">
+              <h2 class="card-title" id="contacts-title">Контакты</h2>
+              <ul class="contact-list">
+                <li class="contact-item">
+                  <span class="contact-label">Email</span>
+                  <a class="contact-value link" href="mailto:onlyreadonly@vk.com"
+                    >onlyreadonly@vk.com</a
+                  >
+                </li>
+                <li class="contact-item">
+                  <span class="contact-label">Телефон</span>
+                  <a class="contact-value link" href="tel:89935896346">8 993 589-63-46</a>
+                </li>
+                <li class="contact-item">
+                  <span class="contact-label">Telegram</span>
+                  <a class="contact-value link" target="_blank" href="https://t.me/fleshweak">@fleshweak</a>
+                </li>
+                <li class="contact-item">
+                  <span class="contact-label">GitHub</span>
+                  <a class="contact-value link" target="_blank" href="https://github.com/1nigm4"
+                    >github.com/1nigm4</a
+                  >
+                </li>
+                <li class="contact-item">
+                  <span class="contact-label">Город</span>
+                  <span class="contact-value"
+                    >Москва, удалённый формат рассматриваю в приоритете</span
+                  >
+                </li>
+              </ul>
+            </section>
+
+            <section class="sidebar-card skill-card" aria-labelledby="core-stack-title">
+              <h2 class="card-title" id="core-stack-title">Сильный стек</h2>
+              <div class="chips">
+                <span class="chip">C# / .NET 6/8</span>
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">NHibernate</span>
+                <span class="chip">EF Core</span>
+                <span class="chip">Dapper</span>
+                <span class="chip">Vue 3</span>
+                <span class="chip">Redis</span>
+                <span class="chip">REST API</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Jenkins CI/CD</span>
+              </div>
+            </section>
+
+            <section class="sidebar-card extra-card" aria-labelledby="strengths-title">
+              <h2 class="card-title" id="strengths-title">Что ценю в работе</h2>
+              <ul class="extra-list">
+                <li class="extra-item">Чистый код, понятную документацию и уважение к срокам.</li>
+                <li class="extra-item">Четкую декомпозицию задач и прозрачные требования.</li>
+                <li class="extra-item">
+                  Работу с legacy без страха: рефакторинг, оптимизация, стабилизация.
+                </li>
+                <li class="extra-item">Командную коммуникацию с аналитиками, QA и заказчиком.</li>
+              </ul>
+            </section>
+          </aside>
+
+          <div class="content">
+            <section class="section-card hero-card" aria-labelledby="summary-title">
+              <div class="hero-grid">
+                <div class="summary">
+                  <h2 id="summary-title">О себе</h2>
+                  <p>
+                    Full-stack .NET разработчик с коммерческим опытом работы в штате и на фрилансе.
+                    Специализируюсь на корпоративных системах, интеграциях с внешними API,
+                    аналитических дашбордах и генерации отчётов. Уверенно веду задачи от уточнения
+                    требований до релиза и сопровождения на стороне заказчика, включая сложные
+                    инциденты, оптимизацию SQL, настройку CI/CD и поддержку production-среды.
+                  </p>
+                </div>
+                <div class="quick-stats" aria-label="Ключевые акценты резюме">
+                  <div class="stat">
+                    <strong>3+ года</strong>
+                    <span>коммерческой разработки в штате и фрилансе</span>
+                  </div>
+                  <div class="stat">
+                    <strong>Full cycle</strong>
+                    <span>от анализа требований до релиза и сопровождения</span>
+                  </div>
+                  <div class="stat">
+                    <strong>API & ETL</strong>
+                    <span>DaData, ФНС, ЕПГУ, Alpha API, аналитические потоки</span>
+                  </div>
+                  <div class="stat">
+                    <strong>Legacy ready</strong>
+                    <span>рефакторинг, оптимизация запросов, устранение инцидентов</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section-card" aria-labelledby="experience-title">
+              <div class="section-header">
+                <div>
+                  <h2 id="experience-title">Опыт работы</h2>
+                  <p class="section-note">
+                    Проекты с заметным результатом: автоматизация, ускорение процессов, устойчивые
+                    интеграции и улучшение пользовательского интерфейса.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline">
+                <article class="timeline-item">
+                  <div class="timeline-date">февраль 2024 — настоящее время</div>
+                  <div class="timeline-body">
+                    <div>
+                      <h3>Full-stack разработчик</h3>
+                      <p class="company">БАРС Груп</p>
+                    </div>
+                    <p>
+                      С середины 2024 года дополнительно веду технический анализ сложных инцидентов:
+                      ошибки генерации Word-документов, нестабильные интеграции, документирование
+                      решений для команды. Участвую в релизах, обновлении контуров заказчиков и
+                      поддержке нескольких сред.
+                    </p>
+                    <div class="project-list">
+                      <div class="project-card">
+                        <h4>БФКИС — конструкторы опросов и обратной связи</h4>
+                        <p>
+                          Разработал конструктор опросов с разными типами вопросов, библиотекой
+                          материалов, историей изменений, редактором формул расчёта баллов, системой
+                          уведомлений и статусной моделью. Интегрировал DaData для автоподстановки
+                          организаций и населённых пунктов, усилил защиту форм.
+                        </p>
+                        <span class="result"
+                          >Результат: решение успешно используется в крупном корпоративном
+                          проекте.</span
+                        >
+                      </div>
+                      <div class="project-card">
+                        <h4>Биотехния / Охота — интеграция с ЕПГУ</h4>
+                        <p>
+                          Доработал распределение наряд-заданий, автоматическую нумерацию заявок,
+                          обработку статусов оплаты и отправку результатов через API ЕПГУ.
+                          Реализовал генерацию Word-договоров на шаблонах с Open XML SDK и
+                          HtmlToOpenXml.
+                        </p>
+                        <span class="result"
+                          >Результат: полностью автоматизирован процесс создания договоров для
+                          заказчика.</span
+                        >
+                      </div>
+                      <div class="project-card">
+                        <h4>АСЭТ / КПЭФ / РЖД — дашборды и аналитика</h4>
+                        <p>
+                          Доработал интерактивные дашборды: обработка пустых значений, цветовые
+                          схемы, ранги на графиках, адаптивная вёрстка. Реализовал виртуального
+                          ассистента и интерфейс пузырьковой диаграммы. Участвовал в ETL, интеграции
+                          с системой «Альфа» и обновлении ядра платформы.
+                        </p>
+                        <span class="result"
+                          >Результат: существенно ускорил отклик после оптимизации SQL и повысил
+                          удобство интерфейсов.</span
+                        >
+                      </div>
+                      <div class="project-card">
+                        <h4>CRM AW / Личный кабинет</h4>
+                        <p>
+                          Разработал реестр дистрибутивов с публикацией для клиентов и сортировкой
+                          по версиям, настроил логирование отправки писем и маршрутизацию, провёл
+                          ребрендинг и выполнил обфускацию Python-кода.
+                        </p>
+                        <span class="result"
+                          >Результат: улучшил управляемость релизов и поддержку клиентского
+                          контура.</span
+                        >
+                      </div>
+                      <div class="project-card">
+                        <h4>Инфраструктура и DevOps</h4>
+                        <p>
+                          Писал сложные SQL-представления и миграции для PostgreSQL, оптимизировал
+                          медленные запросы, обновлял прикладные библиотеки под новые версии
+                          платформы и устранял конфликты зависимостей. Выполнял релизы и обновления
+                          на площадках заказчиков.
+                        </p>
+                        <span class="result"
+                          >Результат: обеспечена бесперебойная работа нескольких контуров и
+                          стабильность обновлений.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="timeline-item">
+                  <div class="timeline-date">январь 2023 — февраль 2024</div>
+                  <div class="timeline-body">
+                    <div>
+                      <h3>.NET-разработчик</h3>
+                      <p class="company">VG Agency — фриланс</p>
+                    </div>
+                    <p>
+                      Вёл полный цикл коммерческой разработки: от технического проектирования и
+                      выбора стека до запуска в production. Самостоятельно принимал архитектурные
+                      решения и адаптировал реализацию под сроки и формат мероприятия или кампании.
+                    </p>
+                    <div class="project-list">
+                      <div class="project-card">
+                        <h4>Интерактивная платформа для мероприятий</h4>
+                        <p>
+                          Реализовал систему генерации персональных видео- и аудиоприветствий по
+                          QR-коду. Подготовил решение к работе под высокой нагрузкой в день события.
+                        </p>
+                        <span class="result"
+                          >Результат: проект запущен в срок и успешно использован на мероприятии с
+                          высокой посещаемостью.</span
+                        >
+                      </div>
+                      <div class="project-card">
+                        <h4>Quiz-игра с розыгрышем призов</h4>
+                        <p>
+                          Разработал полную бизнес-логику розыгрышей и интеграцию с призовым фондом,
+                          обеспечив предсказуемую работу сценариев и удобство администрирования.
+                        </p>
+                        <span class="result"
+                          >Результат: все ключевые механики были реализованы без срыва сроков.</span
+                        >
+                      </div>
+                      <div class="project-card">
+                        <h4>Промо-приложение для бренда Exeed</h4>
+                        <p>
+                          Создал новогоднее промо-приложение под жёсткие сроки, собрав рабочий и
+                          визуально аккуратный продукт в ограниченное время.
+                        </p>
+                        <span class="result"
+                          >Результат: получил положительные отзывы заказчика и сдал проект
+                          вовремя.</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section-card" aria-labelledby="skills-title">
+              <div class="section-header">
+                <div>
+                  <h2 id="skills-title">Навыки и технологии</h2>
+                  <p class="section-note">
+                    Практический стек, который закрывает задачи backend, frontend, баз данных,
+                    интеграций и поддержки production.
+                  </p>
+                </div>
+              </div>
+              <div class="skills-grid">
+                <article class="skill-box">
+                  <h3>Backend</h3>
+                  <p>
+                    C#, .NET Core 6/8, .NET Framework, NHibernate, Entity Framework Core, Dapper,
+                    EPPlus, HtmlAgilityPack, SixLabors.ImageSharp, REST API, Open XML SDK.
+                  </p>
+                </article>
+                <article class="skill-box">
+                  <h3>Frontend</h3>
+                  <p>
+                    Vue 3, Composition API, Pinia, HTML5, CSS3, адаптивная вёрстка, Ext.js, SASS,
+                    Webpack, Vite.
+                  </p>
+                </article>
+                <article class="skill-box">
+                  <h3>Базы данных</h3>
+                  <p>
+                    PostgreSQL: сложные запросы, представления, миграции, оптимизация. Redis:
+                    кэширование. MySQL.
+                  </p>
+                </article>
+                <article class="skill-box">
+                  <h3>Архитектура и паттерны</h3>
+                  <p>
+                    SOLID, GoF, DDD — базовое понимание, Clean Architecture — теория, знакомство с
+                    концепцией микросервисной архитектуры.
+                  </p>
+                </article>
+                <article class="skill-box">
+                  <h3>Тестирование</h3>
+                  <p>
+                    Основы автоматизированного тестирования, базовый уровень xUnit и NUnit,
+                    понимание роли тестов в поддерживаемой кодовой базе.
+                  </p>
+                </article>
+                <article class="skill-box">
+                  <h3>Инструменты и DevOps</h3>
+                  <p>
+                    Git, GitLab, Jenkins CI/CD, Jira, Docker, Stimulsoft, DaData, Telegram API,
+                    интеграции с ФНС, ЕПГУ и Alpha API.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="section-card" aria-labelledby="education-title">
+              <div class="section-header">
+                <div>
+                  <h2 id="education-title">Образование и сертификаты</h2>
+                  <p class="section-note">
+                    Формальная база по разработке и дополнительное обучение по архитектуре и
+                    тестированию.
+                  </p>
+                </div>
+              </div>
+              <div class="education-grid">
+                <article class="info-box">
+                  <h3>Образование</h3>
+                  <p>
+                    <strong>КАИТ 20</strong> — Колледж автоматизации и информационных технологий №20
+                  </p>
+                  <p>Информационные системы и программирование</p>
+                  <p>сентябрь 2019 — июнь 2023</p>
+                </article>
+                <article class="info-box">
+                  <h3>Сертификаты</h3>
+                  <ul>
+                    <li>Domain Driven Design и Clean Architecture, microarch — март 2025.</li>
+                    <li>Автоматизированное тестирование, БАРС Груп — сентябрь 2024.</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="section-card" aria-labelledby="additional-title">
+              <div class="section-header">
+                <div>
+                  <h2 id="additional-title">Дополнительно</h2>
+                  <p class="section-note">
+                    То, что важно для команды не меньше, чем стек: коммуникация, прогнозируемость и
+                    готовность брать ответственность за результат.
+                  </p>
+                </div>
+              </div>
+              <div class="education-grid">
+                <article class="info-box">
+                  <h3>Коммуникация и процесс</h3>
+                  <ul>
+                    <li>
+                      Активно уточняю требования у аналитиков и предлагаю технические альтернативы.
+                    </li>
+                    <li>
+                      Документирую решения, чтобы их можно было повторно использовать командой.
+                    </li>
+                    <li>
+                      Умею работать в связке с заказчиком и сопровождать внедрение на его стороне.
+                    </li>
+                  </ul>
+                </article>
+                <article class="info-box">
+                  <h3>Подход к задачам</h3>
+                  <ul>
+                    <li>
+                      Реалистично оцениваю сложность и при необходимости корректирую сроки по мере
+                      уточнения объёма.
+                    </li>
+                    <li>
+                      Готов к работе с legacy-кодом, рефакторингу и оптимизации производительности.
+                    </li>
+                    <li>Ценю устойчивые решения, а не быстрые, но хрупкие компромиссы.</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="footer-note" aria-label="Блок для связи">
+              <strong
+                >Роман Ганин — разработчик, который умеет не только писать код, но и доводить
+                систему до стабильного релиза.</strong
+              >
+              <div class="footer-links">
+                <a class="footer-link" href="mailto:onlyreadonly@vk.com">Написать на email</a>
+                <a class="footer-link" target="_blank" href="https://t.me/fleshweak">Telegram</a>
+                <a class="footer-link" target="_blank" href="https://github.com/1nigm4">GitHub</a>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
   </body>
 </html>
